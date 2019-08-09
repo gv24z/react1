@@ -1,0 +1,14 @@
+<Container>
+    <Menu items={items} title="Main menu" />
+    Hello world!
+    <Menu items={items1} />
+    <List items={['MongoDB', 'RethinkDB', 'MySQL']} />
+    <Counter /><br/>
+    <ul>
+        {comments.map((comment, idx) => <li key={idx}>{comment.author}: {comment.message}</li>)}
+    </ul>
+    <CommentForm onSend={this.handleComment} />
+    {isModal && <div>Modal</div>}
+    <button onClick={this.handleOpen}>Open Modal</button>
+</Container>
+{isModal && <Timer />}
